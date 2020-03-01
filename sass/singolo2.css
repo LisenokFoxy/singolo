@@ -66,6 +66,7 @@ h5 {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-top: 42px;
 }
 .layout-3-column > * {
   flex-basis: 30%;
@@ -101,6 +102,10 @@ h5 {
   margin: 0;
 }
 
+.about-us__description {
+  margin-top: -45px;
+}
+
 .about-us p {
   font-size: 1.8rem;
   line-height: 30px;
@@ -110,9 +115,15 @@ h5 {
   letter-spacing: 0.19px;
 }
 
-.employee__title p {
+.employee__content p {
+  margin-top: -30px;
   font-size: 1.2rem;
   color: #767e9e;
+  line-height: 22px;
+}
+
+a {
+  padding: 2px;
 }
 
 /*# sourceMappingURL=singolo2.css.map */
