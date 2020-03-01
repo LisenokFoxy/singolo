@@ -1,0 +1,118 @@
+.about-us p, body {
+  font-family: "Lato", Verdana, sans-serif;
+}
+
+html {
+  font-size: 10px;
+  color: #666d89;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+h2 {
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 158px;
+}
+
+h5 {
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 30px;
+}
+
+.tags {
+  display: flex;
+}
+.tags > * {
+  margin-right: 7px;
+}
+
+.tag {
+  border-radius: 5px;
+  padding: 0 5px;
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 2.2rem;
+}
+.tag_selected {
+  border: 1px solid #dedede;
+  color: #dedede;
+}
+.tag_bordered {
+  border: 1px solid #767e9e;
+}
+
+.wrapper {
+  max-width: 940px;
+  margin: auto;
+}
+
+.layout-4-column {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.layout-4-column > * {
+  flex-basis: 20%;
+}
+
+.layout-3-column {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.layout-3-column > * {
+  flex-basis: 30%;
+}
+
+.portfolio {
+  background: #2d303a;
+  width: 1020px;
+  height: 870px;
+  margin: auto;
+}
+
+.portfolio__description {
+  margin-top: -70px;
+}
+
+.portfolio__tags {
+  margin-bottom: 20px;
+}
+
+.portfolio-block {
+  margin-bottom: 20px;
+}
+
+.about-us {
+  background: #f2f2f2;
+  max-width: 1020px;
+  border-bottom: 6px solid #fff;
+  margin: auto;
+}
+
+.about-us__title {
+  margin: 0;
+}
+
+.about-us p {
+  font-size: 1.8rem;
+  line-height: 30px;
+  color: #767e9e;
+  font-weight: 300;
+  text-align: left;
+  letter-spacing: 0.19px;
+}
+
+.employee__title p {
+  font-size: 1.2rem;
+  color: #767e9e;
+}
+
+/*# sourceMappingURL=singolo2.css.map */
