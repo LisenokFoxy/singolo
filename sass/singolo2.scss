@@ -1,32 +1,17 @@
-html {
-    font-size: 10px;
-    color: #666d89;
-  }
 
-body {
-    font-size: 1.6rem;
-    font-family: 'Lato', sans-serif;
-}
+//Abstract
+@import "abstract/constants";
+@import "abstract/mixins";
+@import "abstract/placeholders";
 
-h2 {
-    font-style: normal;
-    font-weight: bold;
-    font-size: 3rem;
-    line-height: 18px;
-}
+//Base
+@import "base/base";
+@import "base/tags";
 
-h5 {
-    font-style: normal;
-    font-weight: bold;
-    font-size: 1.8rem;
-    line-height: 30px;
-}
-.wrapper {
-    max-width: 1020px;
-    margin: auto;
-  }
+//Layouts
+@import "layouts/wrapper";
+@import "layouts/columns";
 
-  .layout-3-column {
-      
-  }
-  
+//Components
+@import "components/portfolio";
+@import "components/about_us";
