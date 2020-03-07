@@ -1,0 +1,158 @@
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', Verdana, sans-serif; 
+    font-size: 10px;
+    color: #f0d8d9;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+    line-height: 45px;
+}
+
+.quote {
+    max-width: 1020px;
+    height: 654px;
+    margin: 0 auto;
+    padding: 67px 40px 72px 40px; 
+    font-size: 12px;
+    background: #f06c64;
+    border-bottom: 6px solid #ea676b; 
+}
+
+.quote-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 37px;
+  margin-left: -7px; 
+}
+
+.quote__title {
+    margin-top: -9px;
+    padding-bottom: 15px;
+}
+
+.quote__text {
+    margin-top: 3px;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 300;
+    text-align: justify;
+}
+
+.quote__link {
+    line-height: 22px;
+}
+
+.quote__content {
+    margin-top: -4px;
+    padding-left: 13px;  
+}
+
+.quote__connect {
+    margin-top: 17px;   
+}
+
+.quote__text__information {
+    margin-top: -4px;
+    font-size: 12px;
+    line-height: 22px;
+    font-weight: 400;
+    text-align: justify;
+}
+
+.quote__href-contact {
+    font-size: 12px;
+    padding: 8px;
+}
+
+input, textarea {
+    border: none;
+    background-color: #d6564f;
+    padding: 12px;
+    margin: 8px;
+    border-radius: 5px;
+    width: 619px;
+    color: #f48c8f;
+}
+
+input {
+    height: 38px;
+}
+textarea {
+    resize: none;
+    height: 202px;
+}
+
+input:hover {
+    background: #a44843; 
+}
+
+textarea:hover {
+    background: #a44843;
+}
+
+
+/*input:invalid {
+    outline: 1px solid red;
+    border-radius: 5px;
+}
+textarea:invalid {
+    outline: 1px solid red;
+    border-radius: 5px;
+}
+*/
+
+.button_colored {
+    margin-left: 6px;
+    padding: 10px 15px;
+    font-size: 1.2rem;
+    background: #a44843;
+    color: #ffffff;
+    border: 1px solid #a44843;
+    border-radius: 5px;
+  }
+
+  .button_colored:hover {
+    background: #f48c8f;
+    border-color: #f48c8f;
+  }
+
+:focus::-webkit-input-placeholder {color: transparent}
+::-webkit-input-placeholder {color:#f48c8f; font-size: 1.2rem;}
+input:invalid:not(:focus) {color: red;}
+  
+
+.footer {
+    width: 1020px;
+height: 76px;
+    margin: 0 auto;
+    background-color: #2d303a;
+}
+
+.footer__icons {
+   padding-left: 825px;
+   margin-top: -23px;
+}
+
+.footer__text p {
+    font-size: 1.2rem;
+    padding-top: 29px;
+    padding-left: 39px;
+    color: #656d89;
+}
+
+a {
+    padding: 2px;
+    text-decoration: none;
+  }
+
+a:hover {
+    text-decoration: underline;
+}
