@@ -1,7 +1,8 @@
 html {
-    font-size: 10px;
-    
+    font-size: 10px; 
 }
+
+
 
 body {
     width: 1020px;
@@ -15,6 +16,7 @@ header {
     height: 95px;
     background-color: #2d303a;
     border-bottom: 6px solid #323746;
+   
     
 }
 
@@ -24,7 +26,7 @@ header {
 
 .logo {
     position:absolute;
-    margin-top:14px;
+    margin-top:28px;
     margin-left: 39px;
     text-transform: uppercase;
     text-decoration: none;
@@ -53,13 +55,14 @@ header {
     font-weight: 700;
     text-align: left;
     
+    
 }
 
 .navigation-item {
     position: relative;
     height: 30px;
     margin-left: 28.67px;
-    margin-top: 18px;
+    margin-top: 48px;
     font-size: 12px;
   }
 
@@ -92,7 +95,7 @@ header {
     position: relative;
     height: 30px;
     margin-left: 28.67px;
-    margin-top: 18px;
+    margin-top: 48px;
     font-size: 12px;
     color: #f06c64;
   }
@@ -102,36 +105,80 @@ header {
     cursor: pointer;
   }
 
-  .iphone {
-    height: 600px;
-    background-color: #f06c64;
-    border-bottom: 6px solid #ea676b;
-  }
+  .header__navigation .active-menu {
+    color: #f06c64;
+}
 
-  .section.slider {
-   position: relative;
-    margin-top: 90px;
-  }
+.navigation a {
+font-size: 12px;
+}
+  
 
   
-.slider:hover {
-    cursor: pointer;
+
+
+  .iphone {
+    height: 600px;
+    overflow: hidden;
+    box-sizing: border-box;
+    position: relative;
+  }
+
+  .wrapper-slides {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .slide {
+    position: relative;
+    display: none;
+    animation: .7s ease-out;
+}
+
+  
+.active,
+.next {
+    display: block;
+}
+
+.next {
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
 
 
-  .slider__arrow-previous {
-    margin-top: -315px;
-    margin-left: 39px;
+
+
+  .arrow-previous {
+    position: absolute;
+    margin-left:-44px;
+    margin-top:-320px;
+    width: 10%;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    outline: none;
+}
+    
      
-  }
-  .slider__arrow-next {
-    margin-top: -28px;
-    margin-left: 962px;
+  
+  .arrow-next {
+    position: absolute;
+   margin-left: 878px;
+   margin-top: -319px;
+    width: 10%;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+  
     
 }
 
 
-
+/*
  .iphone__vertical {
     margin-left: 70px;
     margin-top: 53px;
@@ -142,8 +189,77 @@ header {
 
   }
 
+*/
+
+.iphone button:hover {
+  background-color: #0001;
+}
+
+
+
+  .screen {
+    position: absolute;
+    opacity: 0;
+    transition: .3s;
+}
+
+.screen.left {
+    top: 116px;
+    left: 123px;
+}
+
+.screen.right {
+    top: 115px;
+    left: 555px;
+    transform: rotate(90deg)
+}
+
+
+
+
+
+/* -----Анимация----- */
+
+.to-left {
+  animation-name: left;
+}
+
+.from-right {
+  animation-name: right;
+}
+
+.to-right {
+  animation-name: right;
+  animation-direction: reverse;
+}
+
+.from-left {
+  animation-name: left;
+  animation-direction: reverse;
+}
+
+@keyframes left {
+  from {
+      left: 0;
+  }
+  to {
+      left: -100%;
+  }
+}
+
+@keyframes right {
+  from {
+      left: 100%;
+  }
+  to {
+      left: 0;
+  }
+}
+
+
+
   .services {
-    margin-top: 287px;
+    
     height:501px;
     background-color: #f2f2f2;
     border-bottom: 6px solid #ffffff;
@@ -215,7 +331,7 @@ margin-left: 10px;
     flex-wrap: wrap;
     justify-content: space-between;
     padding-top: 18px;
-    margin-top: -15px;
+    margin-top: -25px;
     margin-bottom: 30px; 
   }
 
@@ -264,6 +380,8 @@ margin-left: 10px;
     line-height: 30px;
     color: #666d89;
   }
+
+  
   
   .tags {
     display: flex;
@@ -271,25 +389,31 @@ margin-left: 10px;
   .tags > * {
     margin-right: 7px;
     margin-top: 8px; 
+    
   }
   
   .tag {
     border-radius: 5px;
-    padding: 0 5px;
+    padding: 0 7px;
     font-size: 1.2rem;
     font-style: normal;
-    font-weight: bold;
+   
     line-height: 2.2rem;
+    background-color: transparent;
+
+    
   }
 
   .tag_selected {
     border: 1px solid #dedede;
     color: #dedede;
+    transition: .3s;
   }
 
   .tag_selected:hover {
     border: 1px solid #f06c64;
     color: #f06c64;
+    transition: .3s;
   }
 
   .tag_bordered {
@@ -302,6 +426,13 @@ margin-left: 10px;
   border: 1px solid #dedede;
 }
   
+.active-img {
+  box-sizing: border-box;
+  border: solid 5px #F06C64;
+  transition: .3s;
+}
+
+
 
   .wrapper {
     max-width: 940px;
@@ -339,11 +470,11 @@ margin-left: 10px;
     margin-top: -70px;
   }
   
-  .portfolio__tags {
+  .portfolio__tags  {
     margin-bottom: 20px;
   }
   
-  .portfolio-block {
+  .portfolio-block  {
     margin-bottom: 20px;
   }
 
@@ -388,12 +519,53 @@ margin-left: 10px;
     color: #767e9e;
     line-height: 22px;
   }
-  
+
+  .hidden {
+    display: none;
+}
+ 
+  #message-container {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.247);
+}
+
+#message {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 18px;
+  background-color: #7a5556fa;
+  color: #ffffff;
+  border-radius: 5px;
+}
+
+.button-wrapper {
+  text-align: center;
+}
+
+.close-button {
+  padding: 7px 6px;
+  width: 35%;
+  border-radius: 5px;
+  color: #7a5556fa;
+}
   .footer__icons-employee {
     margin-top: 20px;
   }
   
-  /*# sourceMappingURL=singolo2.css.map */
+  
+
+
+
+
+
+
+
   
 
 
@@ -558,3 +730,19 @@ a:hover {
     text-decoration: underline;
 }
   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
