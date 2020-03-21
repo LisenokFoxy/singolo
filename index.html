@@ -12,31 +12,38 @@
         <h1 class="hidden">Singolo</h1>
         <a href="#" class="logo">Singolo<span class="logo__star">*</span></a>
         <nav class="header__navigation">
-            <ul class="navigation">
-                <li class="navigation-item-active">Home</li>
-                <li class="navigation-item">Services</li>
-                <li class="navigation-item">Portfolio</li>
-                <li class="navigation-item">About</li>
-                <li class="navigation-item">Contact</li>
+            <ul class="navigation" id="navigation">
+                <li class="navigation-item-active"><a class="active-menu" href="#">Home</a></li>
+                <li class="navigation-item"><a href="#services">Services</a></li>
+                <li class="navigation-item"><a href="#portfolio">Portfolio</a></li>
+                <li class="navigation-item"><a href="#about">About</a></li>
+                <li class="navigation-item"><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
     <section class="iphone">
-        <div class="wrapper">
-            <img src="./assets/img/phone_vertcal.svg" class="iphone__vertical" alt="iphone vertical">
-            <img src="./assets/img/phone_horizontal.svg" class="iphone__horizontal" alt="iphone horizontal">
+        <div class="wrapper-slides">
+            <div class="slide active">
+                <img src="./assets/img/iphone_group_1.png" alt="iphone_group1">
+            <!-- <img src="./assets/img/phone_vertcal.svg" class="iphone__vertical" alt="iphone vertical"> --> 
+            <!-- <img src="./assets/img/phone_horizontal.svg" class="iphone__horizontal" alt="iphone horizontal"> --> 
+                <img id="screen-left" class="screen left" src="./assets/img/black_screen.png" alt="iphone">
+                <img id="screen-right" class="screen right" src="./assets/img/black_screen.png" alt="iphone">   
+            </div>
+            <div class="slide">
+                <img src="./assets/img/iphone_group_2.png" alt="iphone_group2">
+            </div>
         </div>
+        <button class="arrow-previous"><img src="assets/img/previous.svg" alt="previous-arrow"></button> 
+        <button class="arrow-next"><img src="assets/img/next.svg" alt="next-arrow"></button>
+
     </section>
-    <section class="slider">
+    
         
-        <div class="slider__arrow-previous ">
-            <img src="assets/img/previous.svg" alt="previous-arrow">
-        </div>
-        <div class="slider__arrow-next ">
-            <img src="assets/img/next.svg" alt="next-arrow">
-        </div>
-    </section>
+        
+    
     <section class="services">
+        <a name="services"></a>
         <div class="wrapper">
             <h2>Our Services</h2>
             <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.
@@ -94,18 +101,19 @@
 
 
 
-
+    
     <section class="portfolio">
+        <a name="portfolio"></a>
         <div class="wrapper">
             <h2 class="portfolio__title">Portfolio</h2>
             <p class="portfolio__description">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-            <div class="portfolio__tags tags">
-                <span class="tag tag_selected">All</span>
-                <span class="tag tag_bordered">Web Design</span>
-                <span class="tag tag_bordered">Graphic Design</span>
-                <span class="tag tag_bordered">Artwork</span>
+            <div class="portfolio__tags tags" id="tags">
+                <button class="tag tag_selected">All</button>
+                <button class="tag tag_bordered">Web Design</button>
+                <button class="tag tag_bordered">Graphic Design</button>
+                <button class="tag tag_bordered">Artwork</button>
             </div>
-            <div class="layout-4-column">
+            <div class="layout-4-column" id="portfolio-images" >
                 <article class="portfolio-block">
                     <img class="portfolio__image" src="./assets/img/ship.png" width=220px height=187px alt="ship">
                 </article>
@@ -156,7 +164,10 @@
             </div>
         </div>
     </section>
+
+    
     <section class="about-us">
+        <a name="about"></a>
         <div class="wrapper">
             <h2 class="about-us__title">About Us</h2>
             <p class="about-us__description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Dios mollis, non commodo lustus, bisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
@@ -211,8 +222,9 @@
        
 
 
-    
+        
         <section class="quote">
+            <a name="contact"></a>
             <div class="wrapper">
                 <h2 class="quote__title">Get a Quote</h2>
                 <p class="quote__text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
@@ -220,13 +232,13 @@
                     <div class="quote__form">
                         <form action method="POST">
                             <div class="layout-2-column quote__line">
-                                <input type="text" name="name" placeholder="Name (Required)" required minlength="2">
-                                <input type="email" name="email" placeholder="Email (Required)" required>
-                                <input type="text" name="subject" placeholder="Subject">
+                                <input id="name" type="text" name="name" placeholder="Name (Required)" required minlength="2">
+                                <input id="email" type="email" name="email" placeholder="Email (Required)" required>
+                                <input id="subject" type="text" name="subject" placeholder="Subject">
                             </div>
-                            <textarea name="project" placeholder="Describe your project in detail..." class="quote__line"></textarea>
+                            <textarea id="description" name="project" placeholder="Describe your project in detail..." class="quote__line"></textarea>
                             <div class="quote__button">
-                                <button type="submit" class="button button_colored">Submit</button>
+                                <button id="submit-button" type="submit" class="button button_colored">Submit</button>
                             </div>
     
                         </form>
@@ -243,7 +255,7 @@
                             </p>
                             <p class="quote__link">
                                 <span class="icon-round icon-round_white"><span class="ico ico_phone"><img src="./assets/img/phone.png" alt="location"></span></span>
-                                <a class="quote__href-contact" href="03528 331 86 35">03528 331 86 35</a>
+                                <a class="quote__href-contact" href="tel:03528 331 86 35">03528 331 86 35</a>
                             </p>
                             <p class="quote__link">
                                 <span class="icon-round icon-round_white"><span class="ico ico_letter"><img src="./assets/img/mail.png" alt="mail"></span></span>
@@ -252,6 +264,16 @@
                         </div>
                     </div>
                     
+                </div>
+            </div>
+            <div id="message-container" class="hidden">
+                <div id="message">
+                    <h3>The letter was sent</h3>
+                    <p id="message-subject"></p>
+                    <p id="message-description"></p>
+                    <div class="button-wrapper">
+                        <button class="close-button" id="close-button">OK</button>
+                    </div>
                 </div>
             </div>
         </section>
@@ -270,5 +292,6 @@
             
         </footer>
         
+        <script src="./script.js"></script>
     </body>
     </html>
