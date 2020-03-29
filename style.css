@@ -1,5 +1,6 @@
 html {
     font-size: 10px; 
+    scroll-behavior: smooth;
 }
 
 
@@ -12,13 +13,231 @@ body {
 }
 
 header {
+  position: sticky;
+  top:16px;
+  z-index:1;
     width: 1020px;
     height: 95px;
+    margin-top: -95px;
     background-color: #2d303a;
     border-bottom: 6px solid #323746;
    
+   
     
 }
+
+
+@media only screen and (min-width:1020px) {
+  
+  .navigation {
+    max-width: 1020px;
+    
+  }
+  .wrapper-slides {
+    max-width: 1020px;
+    
+  }
+}
+
+@media only screen and (min-width:767px) and (max-width:1019px) {
+  body {
+    width: 100%;
+  }
+  .header {
+    max-width: 1020px;
+  }
+  .header__navigation {
+    
+    max-width: 1020px;
+  }
+
+  .navigation .ul > li {
+    visibility: hidden;
+  }
+ 
+  .iphone {
+    
+    max-width: 1020px;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  .services {
+    
+    max-width: 1020px;
+    
+  }
+  .portfolio {
+    
+    max-width: 1020px;
+    
+  }
+
+  
+  .portfolio .layout-4-column article {
+    margin: 10px;
+    flex: 1 0 25%;
+  }
+
+
+
+  .quote {
+    
+    max-width: 1020px;
+  }
+
+  
+
+  input, textarea {
+    max-width: calc(100% - 150px);
+    
+}
+
+
+}
+
+
+@media only screen and (width:768px) {
+  .header__navigation {
+    
+    max-width:768px;
+  }
+
+  .portfolio {
+    max-width: 768px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  #navigation {
+    margin-left: 250px;
+  }
+  .services {
+    
+    padding-left: 30px;
+    padding-right: 30px;
+    
+  }
+
+  
+}
+
+
+@media only screen and (max-width:767px) {
+body {
+  width: 100%;
+}
+
+
+
+  .header {
+    min-width: 320px;
+    max-width:768px;
+  }
+  .header__navigation {
+    min-width: 320px;
+    max-width:768px;
+  }
+.navigation {
+  visibility: hidden;
+  
+}
+ 
+  .iphone {
+    min-width: 320px;
+    max-width:768px;
+  }
+  img {
+    max-width: 100%;
+  }
+  
+
+  
+
+  .services {
+    min-width: 320px;
+    max-width:768px;
+    height: auto;
+    padding-left: 40px;
+    padding-right: 40px;
+    
+  }
+  .portfolio {
+    min-width: 320px;
+    max-width:768px;
+    
+  }
+
+  .portfolio .layout-4-column article {
+    
+    flex: 1 0 40%;
+  }
+
+  .about-us .layout-3-column {
+    display: flex;
+    flex-direction: column;
+    min-width:100%;
+    margin-top: 45px;
+    overflow: hidden;
+  }
+  
+  
+  
+
+
+  .quote {
+    min-width: 320px;
+    max-width:768px;
+    
+    
+  }
+
+  input, textarea {
+    max-width: calc(100% - 300px);
+    
+  }
+
+  .footer{
+    min-width: 320px;
+    max-width:768px;
+  }
+}
+
+@media only screen and (width:320px) {
+
+  .header__navigation {
+    
+    width:320px;
+  }
+
+  .portfolio {
+    width:320px;
+    
+  }
+  .portfolio .wrapper{
+    width:320px;
+  }
+  #navigation {
+    margin-left: 250px;
+  }
+  .portfolio .layout-4-column article {
+    
+    flex: 1 0 10%;
+  }
+
+
+
+}
+
+
+
+
+
+
+
+
+
 
 .hidden {
     color: #2d303a;
@@ -54,8 +273,6 @@ header {
     font-family: "Lato";
     font-weight: 700;
     text-align: left;
-    
-    
 }
 
 .navigation-item {
@@ -118,10 +335,11 @@ font-size: 12px;
 
 
   .iphone {
-    height: 600px;
+    max-height: 600px;
     overflow: hidden;
     box-sizing: border-box;
     position: relative;
+    margin-top: 95px;
   }
 
   .wrapper-slides {
@@ -153,7 +371,7 @@ font-size: 12px;
 
   .arrow-previous {
     position: absolute;
-    margin-left:-44px;
+    margin-left:-4px;
     margin-top:-320px;
     width: 10%;
     border: none;
@@ -166,7 +384,7 @@ font-size: 12px;
   
   .arrow-next {
     position: absolute;
-   margin-left: 878px;
+   margin-left: 918px;
    margin-top: -319px;
     width: 10%;
     background: transparent;
@@ -260,7 +478,7 @@ font-size: 12px;
 
   .services {
     
-    height:501px;
+    min-height:501px;
     background-color: #f2f2f2;
     border-bottom: 6px solid #ffffff;
         
@@ -334,6 +552,8 @@ margin-left: 10px;
     margin-top: -25px;
     margin-bottom: 30px; 
   }
+
+  
 
   .service__icon {
    margin-left: -10px;
@@ -449,6 +669,12 @@ margin-left: 10px;
     flex-basis: 20%;
   }
   
+
+  
+  
+  
+
+
   .layout-3-column {
     display: flex;
     flex-wrap: wrap;
@@ -462,7 +688,7 @@ margin-left: 10px;
   .portfolio {
     background: #2d303a;
     width: 1020px;
-    height: 870px;
+    min-height: 870px;
     margin: auto;
   }
   
@@ -483,7 +709,7 @@ margin-left: 10px;
   }
   
   .about-us {
-    height: 735px;
+    min-height: 735px;
     background: #f2f2f2;
     max-width: 1020px;
     border-bottom: 6px solid #fff;
@@ -491,7 +717,7 @@ margin-left: 10px;
   }
   
   .about-us__title {
-    height: 100px;
+    min-height: 100px;
     padding-top: 63px;
     font-size: 30px;
     line-height: 18px;
@@ -588,7 +814,7 @@ margin-left: 10px;
 
 .quote {
     max-width: 1020px;
-    height: 654px;
+    min-height: 654px;
     margin: 0 auto;
     padding: 67px 40px 72px 40px; 
     font-size: 12px;
@@ -622,8 +848,11 @@ p.quote__link {
 }
 
 .quote__content  {
+  position: relative;
     margin-top: -4px;
+    
     padding-left: 13px;  
+    padding-right: 20px;
     
     
 }
@@ -705,7 +934,7 @@ input:invalid:not(:focus) {color: red;}
 
 .footer {
     width: 1020px;
-    height: 82px;
+    min-height: 82px;
     background-color: #2d303a;
 }
 
